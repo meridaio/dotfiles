@@ -1,0 +1,43 @@
+set ignorecase
+set smartcase
+set hlsearch
+set wrap
+set number
+set laststatus=2
+set autoindent
+set smartindent
+set cursorline
+set softtabstop=4 "go back one tab when hitting backspace(without this is goes back single space)
+set tabstop=4 "used by >>, << and tab.
+set shiftwidth=4 "number of space characters used when displaying TAB
+set expandtab "Replate tab by spaces
+set encoding=utf-8
+set scrolloff=5
+set incsearch
+set timeoutlen=100
+set nostartofline
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-;> mzA;<Esc>`z
+nnoremap ; :
+nnoremap : ;
+" nnoremap j gj
+" nnoremap k gk
+" nnoremap gj j
+" nnoremap gk k
+nnoremap <C-s> :nohl<CR>
+nnoremap Y y$
+
+vmap <Leader>c "+y<cr>
+vnoremap . :normal<Space>
+nmap <Leader>v "+p<cr>
+inoremap <C-v> <C-r>*
+inoremap fd <Esc>
+vnoremap fd <Esc>
+inoremap df <Esc>
+vnoremap df <Esc>
+nnoremap <Leader>r :vsc Refactor.Rename<CR>
+nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
