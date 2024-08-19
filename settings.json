@@ -1,0 +1,35 @@
+{
+    "workbench.colorTheme": "Catppuccin Latte",
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["f", "d"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["d", "f"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["k", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [";"],
+            "after": [":"]
+        },
+        {
+            "before": [":"],
+            "after": [";"]
+        }
+    ],
+    "vim.timeout": 50,
+    "terminal.integrated.fontFamily": "FiraCode NF",
+    "terminal.integrated.fontWeightBold": "bold",
+    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly"
+}

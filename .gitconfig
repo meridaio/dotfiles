@@ -1,0 +1,20 @@
+[diff]
+    tool = vimdiff
+[alias]
+	p = push
+	ll = log --oneline
+	d = diff
+	dv = difftool -t vimdiff -y
+	sc = switch -c
+	ap = add --patch
+	po = push -u origin HEAD
+	st = status
+	c = commit
+	s = switch
+	dc = diff --cached
+	yolo = commit -m \"$(curl -s https://whatthecommit.com/index.txt)\"
+	alias = !git config --global -l | grep alias
+[http]
+	sslbackend = schannel
+[init]
+	defaultBranch = main
