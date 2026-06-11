@@ -1,0 +1,49 @@
+input {
+	keyboard {
+		xkb {
+			options "caps:ctrl_modifier,ctrl:swapcaps"
+		}
+	}
+	mouse {
+		accel-speed 0.15
+		accel-profile "flat"
+	}
+}
+
+binds {
+    Mod+Return hotkey-overlay-title="Open Terminal: Ghostty" { spawn "ghostty"; }
+    Mod+R hotkey-overlay-title="Cycle Column Width" { switch-preset-column-width; }
+    Mod+Shift+J { focus-workspace-down; }
+    Mod+Shift+K { focus-workspace-up; }
+    Mod+Shift+H { focus-monitor-left; }
+    Mod+Shift+L { focus-monitor-right; }
+    Mod+Shift+F hotkey-overlay-title="Expand Column to Available Width" { expand-column-to-available-width; }
+    Mod+Shift+CTRL+K hotkey-overlay-title="Move Workspace Up" { move-workspace-up; }
+    Mod+Shift+CTRL+J hotkey-overlay-title="Move Workspace Down" { move-workspace-down; }
+    Mod+Shift+B hotkey-overlay-title="Toggle Noctalia bar" { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
+    Mod+CTRL+J { move-window-to-workspace-down; }
+    Mod+CTRL+K { move-window-to-workspace-up; }
+
+    Mod+Shift+S { spawn-sh "set -e; grim -t ppm -g \"$(slurp -o -d -F monospace)\" - | satty --filename - --copy-command=wl-copy --annotation-size-factor 2.0 --output-filename=\"$(xdg-user-dir PICTURES)/Screenshots/Screenshot from %Y-%m-%d %H:%M:%S.png\" --actions-on-enter=\"save-to-clipboard,exit\" --brush-smooth-history-size=5 --disable-notifications"; }
+}
+
+gestures {
+    hot-corners {
+         off
+        //top-left
+        // top-right
+        // bottom-left
+        // bottom-right
+    }
+}
+
+layout {
+    preset-column-widths { 
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.33333; }
+}
+
